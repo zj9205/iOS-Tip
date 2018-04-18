@@ -19,3 +19,10 @@ let attributes = [
 ]
 someUITextField.attributedPlaceholder = NSAttributedString(string: "Placeholder Text", attributes:attributes)
 
+// Check when a UITextField changes
+textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editingChanged)
+@objc func textFieldDidChange(_ textField: UITextField) { }
+
+// Add action if touch down text field
+textField.addTarget(self, action: #selector(newAction(_:)), for: .touchDown)
+@objc func newAction(_ textField: UITextField) { }
