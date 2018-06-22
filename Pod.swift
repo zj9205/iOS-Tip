@@ -5,7 +5,10 @@ pod setup --verbose
 // init pod
 pod init
 pod install
+pod install --no-repo-update
+
 pod update
+pod update repo-name
 
 // open by Xcode
 open -a Xcode Podfile
