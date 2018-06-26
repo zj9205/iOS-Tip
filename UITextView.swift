@@ -3,11 +3,5 @@
 self.htmlTextView.isScrollEnabled = false
 self.htmlTextView.isScrollEnabled = true
 
-// Check if a UITextField is changing
-// By Storyboard: Insert an IBAction from a textField with EditingChanged event
-// By Code
-inputTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
-
-@objc func textFieldDidChange(_ textField: UITextField) {
-    
-}
+// disable edit
+htmlTextView.isEditable = false
