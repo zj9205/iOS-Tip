@@ -26,3 +26,12 @@ textField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: .editi
 // Add action if touch down text field
 textField.addTarget(self, action: #selector(newAction(_:)), for: .touchDown)
 @objc func newAction(_ textField: UITextField) { }
+
+// Check if a UITextField is changing
+// By Storyboard: Insert an IBAction from a textField with EditingChanged event
+// By Code
+inputTextField.addTarget(self, action: #selector(textFieldDidChange(_:)), for: UIControlEvents.editingChanged)
+
+@objc func textFieldDidChange(_ textField: UITextField) {
+    
+}
